@@ -1,0 +1,25 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  max-width: 100%;
+}
+.logo {
+  width: 200px;
+  height: 200px;
+}
+.logo-svg {
+  width: 200px;
+  height: 200px;
+}
+.logo-svg-jt {
+  fill: #ff7f50;
+}
+.logo-svg-circle {
+  stroke: #ff7f50;
+  fill: none;
+}

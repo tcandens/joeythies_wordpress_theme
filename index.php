@@ -9,8 +9,7 @@
  * Methods for TimberHelper can be found in the /lib sub-directory
  *
  * @package  WordPress
- * @subpackage  Timber
- * @since   Timber 0.1
+ * @subpackage  Joeythies.com
  */
 
 if ( ! class_exists( 'Timber' ) ) {
@@ -19,9 +18,4 @@ if ( ! class_exists( 'Timber' ) ) {
 }
 $context = Timber::get_context();
 $context['posts'] = Timber::get_posts();
-$context['foo'] = 'bar';
-$templates = array( 'index.twig' );
-if ( is_home() ) {
-	array_unshift( $templates, 'home.twig' );
-}
-Timber::render( $templates, $context );
+Timber::render( 'index.twig', $context );
