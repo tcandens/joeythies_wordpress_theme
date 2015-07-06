@@ -1,0 +1,38 @@
+//
+// MIXINS
+// ------
+
+// Media-query mixin
+// Use: +media-query( { conditions }, { OPTIONAL, media } )
+media-query( condition, media = screen )
+  query = media + " and " + "(" + condition + ")"
+  @media query
+    {block}
+
+// Stripe background patterns
+// Returns the complimentary angle
+complimentary-angle(A)
+  B = 90 - A
+  return B
+
+_rads(degrees)
+  return ( degrees * PI ) / 180
+
+// Returns the the length of unknown side with
+// one known length and two known angles
+// A: opposite angle of wanted side;
+// b: known side length; B: opposite angle of b;
+sine-law(A, b, B)
+  a = (b / sin(_rads(B)) * sin(_rads(A)))
+  return abs(round(a))
+
+lines(color, line-width, gradient-width, angle = 30)
+  comp-angle = complimentary-angle(angle)
+  background-image: repeating-linear-gradient(unit(angle, 'deg'),
+    color,
+    color unit(line-width, 'px'),
+    transparent unit(line-width + 1, 'px'),
+    transparent unit(gradient-width, 'px') )
+  box-width = sine-law(90, gradient-width, angle)
+  box-height = sine-law(angle, box-width, comp-angle)
+  // -webkit-background-size: unit(box-width, 'px') unit(box-height, 'px')

@@ -8,6 +8,11 @@ body {
   margin: 0;
   max-width: 100%;
 }
+h1,
+h2,
+h3 {
+  font: 1.2/1.3em 'jaf-lapture', 'Alegreya', Georgia, 'Times New Roman', serif;
+}
 .logo {
   width: 200px;
   height: 200px;
