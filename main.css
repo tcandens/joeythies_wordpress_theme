@@ -124,10 +124,10 @@ a:active {
   height: 70px;
 }
 .logo-svg-jt {
-  fill: #2400b7;
+  fill: #fff;
 }
 .logo-svg-circle {
-  stroke: #2400b7;
+  stroke: #fff;
   stroke-width: 4px;
   fill: none;
 }
