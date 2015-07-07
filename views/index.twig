@@ -3,9 +3,11 @@
 {% block content %}
   <main class="container flex-center" role="main">
     {% if intro %}
-      <section class="intro">
-        {{ intro.content }}
-      </section>
+      <div class="intro-container">
+        <section class="intro bordered">
+          {{ intro.content }}
+        </section>
+      </div>
     {% endif %}
     {% for post in posts %}
       {% include post.post_type~"-entry.twig" %}
