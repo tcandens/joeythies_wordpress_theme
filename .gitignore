@@ -1,3 +1,4 @@
+**/*.map
 vendor
 wp-content
 node_modules

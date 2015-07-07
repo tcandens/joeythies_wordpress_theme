@@ -1,13 +1,19 @@
 'use strict';
 
 var gulp = require('gulp');
+var autoprefixer = require('autoprefixer-core');
+var postcss = require('gulp-postcss');
+var sourcemaps = require('gulp-sourcemaps');
 var stylus = require('gulp-stylus');
-var browserSync = require('browser-sync');
+var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 
 gulp.task('stylus:dev', function() {
   return gulp.src([ 'stylus/main.styl' ])
+    .pipe(sourcemaps.init())
     .pipe(stylus())
+    .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./'))
 });
 
