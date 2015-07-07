@@ -12,21 +12,22 @@
   left 0
   bottom 0
   align-content stretch
-  // background-color alpha(white, 20%)
   z-index Z-NAVIGATION
 .navigation
   @extend .flex-container
   flex-direction row-reverse
+  justify-content space-between
   width 100%
 .nav-list
   @extend .flex-container
-  justify-content flex-end
-  overflow hidden
-  max-width 100%
-  max-width 0
-  transition max-width 400ms ease
+  align-items center
+  background-color alpha(white, 50%)
+  transform translate3d(0, 80px, 0)
+  transition transform 400ms ease-in-out
 .nav-list__item
-  padding 1em
+  padding 0 0.8em
+  font-size 1.4em
+  font-weight 700
   text-align center
 .nav-button
   cursor pointer
@@ -35,10 +36,10 @@
   background-color alpha(white, 50%)
   border-radius 50%
   background-image radial-gradient(MAINCOLOR 45%, transparent 50%)
-  background-repeat repeat-x
+  background-repeat repeat-y
   background-size (width / 3) (width / 3)
-  background-position 0 50%
+  background-position 50% 50%
   overflow hidden
   transition background-position 400ms ease
   &:hover
-    background-position -(width) 50%
+    background-position 50% ( width * -1 )

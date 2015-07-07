@@ -55,6 +55,9 @@ h3 {
 p {
   margin: 0 0 1em 0;
 }
+a {
+  color: #2400b7;
+}
 a:active {
   color: #ff0787;
 }
@@ -113,11 +116,11 @@ a:active {
   display: block;
   content: '';
   position: relative;
-  top: -0.5em;
-  left: 0.5em;
+  top: -0.6em;
+  left: 0.2em;
   width: 3.2em;
   height: 1em;
-  background-image: radial-gradient(circle at 0.4em 0.5em, #ff0787, #ff0787 0.4em, transparent 0.4em), radial-gradient(circle at 1.6em 0.5em, #ff0787, #ff0787 0.4em, transparent 0.4em), radial-gradient(circle at 2.8em 0.5em, #ff0787, #ff0787 0.4em, transparent 0.4em);
+  background-image: radial-gradient(circle at 0.3em 0.5em, #ff0787, #ff0787 0.3em, transparent 0.3em), radial-gradient(circle at 1.2em 0.5em, #ff0787, #ff0787 0.3em, transparent 0.3em), radial-gradient(circle at 2.1em 0.5em, #ff0787, #ff0787 0.3em, transparent 0.3em);
 }
 .logo-svg {
   width: 70px;
@@ -150,19 +153,25 @@ a:active {
   -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
 .nav-list {
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  overflow: hidden;
-  max-width: 100%;
-  max-width: 0;
-  transition: max-width 400ms ease;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255,255,255,0.5);
+  -webkit-transform: translate3d(0, 80px, 0);
+          transform: translate3d(0, 80px, 0);
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
 }
 .nav-list__item {
-  padding: 1em;
+  padding: 0 0.8em;
+  font-size: 1.4em;
+  font-weight: 700;
   text-align: center;
 }
 .nav-button {
@@ -172,14 +181,14 @@ a:active {
   background-color: rgba(255,255,255,0.5);
   border-radius: 50%;
   background-image: radial-gradient(#2400b7 45%, transparent 50%);
-  background-repeat: repeat-x;
+  background-repeat: repeat-y;
   background-size: 23.333333333333332px 23.333333333333332px;
-  background-position: 0 50%;
+  background-position: 50% 50%;
   overflow: hidden;
   transition: background-position 400ms ease;
 }
 .nav-button:hover {
-  background-position: -70px 50%;
+  background-position: 50% -70px;
 }
 .post-container:active .post {
   top: 0.2em;
