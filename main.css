@@ -200,7 +200,7 @@ a:active {
       -ms-flex-pack: distribute;
           justify-content: space-around;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 80px;
   left: 0;
   bottom: 0;
@@ -296,16 +296,16 @@ a:active {
   left: 0;
   width: 100%;
   height: 51px;
+  overflow: hidden;
 }
 .luna-boot-scoot {
   position: absolute;
-  right: -60px;
   width: 60px;
   height: 51px;
   z-index: 4000;
   background: url("images/luna-boot-scoot.png") 0 0;
-  -webkit-animation: play-luna-boot-scoot 600ms steps(4) infinite, play-across-window 50s linear infinite;
-          animation: play-luna-boot-scoot 600ms steps(4) infinite, play-across-window 50s linear infinite;
+  -webkit-animation: play-luna-boot-scoot 600ms steps(4) infinite, play-across-window 10s linear infinite;
+          animation: play-luna-boot-scoot 600ms steps(4) infinite, play-across-window 10s linear infinite;
 }
 @-webkit-keyframes play-luna-boot-scoot {
   0% {
@@ -325,18 +325,18 @@ a:active {
 }
 @-webkit-keyframes play-across-window {
   0% {
-    right: 0;
+    right: -60px;
   }
   100% {
-    right: 100%;
+    right: calc(100% + 60px);
   }
 }
 @keyframes play-across-window {
   0% {
-    right: 0;
+    right: -60px;
   }
   100% {
-    right: 100%;
+    right: calc(100% + 60px);
   }
 }
 
