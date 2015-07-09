@@ -25,6 +25,7 @@ gulp.task('serve:dev', function() {
 
 gulp.task('watch', function() {
   gulp.watch([ 'stylus/**/*.styl' ], [ 'stylus:dev', reload ]);
+  gulp.watch([ 'js/**/*.js' ], [ reload ]);
   gulp.watch([ './**/*.php', './views/**/*.twig' ], [ reload ]);
 });
 

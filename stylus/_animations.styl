@@ -1,0 +1,29 @@
+
+.luna-boot-scoot-container
+  position absolute
+  left 0
+  width 100%
+  height 51px
+.luna-boot-scoot
+  position absolute
+  right -60px
+  width 60px
+  height 51px
+  z-index Z-ANIMATIONS
+  background url('images/luna-boot-scoot.png') 0 0
+  animation play-luna-boot-scoot 600ms steps(4) infinite,
+            play-across-window 50s linear infinite
+@keyframes play-luna-boot-scoot
+  0% {
+    background-position 0 0
+  }
+  100% {
+    background-position -240px
+  }
+@keyframes play-across-window
+  0% {
+    right 0
+  }
+  100% {
+    right 100%
+  }
