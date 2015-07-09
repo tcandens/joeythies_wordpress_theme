@@ -187,7 +187,7 @@ a:active {
   overflow: hidden;
   transition: background-position 400ms ease;
 }
-.nav-button:hover {
+.nav-button:active {
   background-position: 50% -70px;
 }
 .post-container:active .post {
@@ -223,6 +223,13 @@ a:active {
   font-size: 1.5em;
   padding: 1em;
   background-color: #2400b7;
+}
+.nav-open .nav-list {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.nav-open .nav-button {
+  background-position: 50% -70px;
 }
 
 /*# sourceMappingURL=main.css.map */

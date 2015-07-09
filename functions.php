@@ -50,6 +50,7 @@ class StarterSite extends TimberSite {
 		return $twig;
 	}
 
+
 }
 
 new StarterSite();
@@ -58,3 +59,11 @@ function myfoo( $text ) {
 	$text .= ' bar!';
 	return $text;
 }
+
+function enqueue_scripts() {
+	wp_enqueue_style( 'stylesheet', get_template_directory_uri() . '/main.css' );
+	wp_register_script( 'main-script', get_template_directory_uri() . '/js/main.js', array( 'jquery', 'backbone' ), false, true );
+	wp_enqueue_script( 'main-script' );
+}
+
+add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
