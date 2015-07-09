@@ -40,6 +40,11 @@ figure {
 a {
   text-decoration: none;
 }
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+}
 body {
   font: 1.3em/1.3 'jaf-facitweb', 'Open Sans', 'Helvetica', sans-serif;
   color: #2400b7;
@@ -63,6 +68,7 @@ a:active {
 }
 .flex-container,
 .flex-center,
+.flex-row,
 .navigation,
 .nav-list,
 .work-container {
@@ -79,6 +85,11 @@ a:active {
       -ms-flex-align: center;
           align-items: center;
 }
+.flex-row {
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
 .outline-box,
 .post {
   position: relative;
@@ -91,7 +102,8 @@ a:active {
 .post:active {
   border-color: #ff0787;
 }
-.bordered {
+.bordered,
+.btn {
   border: 8px solid #fff;
 }
 .line-shadow,
@@ -103,6 +115,23 @@ a:active {
   margin: 1em 0 1em 1em;
   background-image: repeating-linear-gradient(-45deg, #2400b7, #2400b7 3px, transparent 4px, transparent 11px);
   -webkit-background-size: 16px 16px;
+}
+.line-shadow-white {
+  top: 1em;
+  left: 1em;
+  padding: 0 1em 1em 0;
+  margin: 1em 0 1em 1em;
+  background-image: repeating-linear-gradient(-45deg, #fff, #fff 3px, transparent 4px, transparent 11px);
+  -webkit-background-size: 16px 16px;
+}
+.btn {
+  font-size: 0.8em;
+  font-family: 'jaf-lapture', 'Alegreya', Georgia, 'Times New Roman', serif;
+  padding: 0.5em;
+  color: #fff;
+}
+.btn-red {
+  background-color: #ff0787;
 }
 .window {
   border-radius: 1em 1em 0 0;
@@ -213,14 +242,14 @@ a:active {
 .hgroup h1 {
   font-style: italic;
 }
-.intro-container {
+.header {
   width: 100%;
   margin-bottom: 1em;
   background-color: #2400b7;
   color: #fff;
   padding: 1em;
 }
-.intro {
+.header-inner {
   font-size: 1.5em;
   padding: 1em;
   background-color: #2400b7;

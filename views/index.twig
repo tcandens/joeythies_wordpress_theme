@@ -3,12 +3,12 @@
 {% block content %}
   <main class="container flex-center" role="main">
     {% if intro %}
-      <div class="intro-container">
-        <section class="intro bordered">
+      <header class="header">
+        <section class="header-inner bordered">
           {% include "logo.twig" %}
           {{ intro.content }}
         </section>
-      </div>
+      </header>
     {% endif %}
     {% for post in posts %}
       {% include post.post_type~"-entry.twig" %}
