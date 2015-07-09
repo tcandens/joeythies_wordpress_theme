@@ -63,7 +63,6 @@ a:active {
 }
 .flex-container,
 .flex-center,
-.header,
 .navigation,
 .nav-list,
 .work-container {
@@ -134,61 +133,63 @@ a:active {
   stroke-width: 4px;
   fill: none;
 }
-.header {
+.navigation {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   position: fixed;
   width: 100%;
-  height: 90px;
-  padding: 10px;
+  height: 80px;
   left: 0;
   bottom: 0;
-  -webkit-align-content: stretch;
-      -ms-flex-line-pack: stretch;
-          align-content: stretch;
+  margin: 0;
   z-index: 5000;
 }
-.navigation {
-  -webkit-flex-direction: row-reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-}
 .nav-list {
+  width: 100%;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(255,255,255,0.5);
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  background-color: rgba(255,255,255,0.6);
   -webkit-transform: translate3d(0, 80px, 0);
           transform: translate3d(0, 80px, 0);
   transition: -webkit-transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out;
 }
+.nav-list:last-child {
+  padding-right: 70px;
+}
 .nav-list__item {
+  display: block;
   padding: 0 0.8em;
   font-size: 1.4em;
   font-weight: 700;
   text-align: center;
 }
 .nav-button {
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
   cursor: pointer;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background-color: rgba(255,255,255,0.5);
   border-radius: 50%;
   background-image: radial-gradient(#2400b7 45%, transparent 50%);
   background-repeat: repeat-y;
-  background-size: 23.333333333333332px 23.333333333333332px;
+  background-size: 20px 20px;
   background-position: 50% 50%;
   overflow: hidden;
   transition: background-position 400ms ease;
-}
-.nav-button:active {
-  background-position: 50% -70px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  z-index: 6000;
 }
 .post-container:active .post {
   top: 0.2em;
@@ -229,7 +230,7 @@ a:active {
           transform: translate3d(0, 0, 0);
 }
 .nav-open .nav-button {
-  background-position: 50% -70px;
+  background-position: 50% -100%;
 }
 
 /*# sourceMappingURL=main.css.map */
