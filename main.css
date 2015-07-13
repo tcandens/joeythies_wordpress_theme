@@ -5,15 +5,15 @@
 }
 ::-moz-selection {
   color: #fff;
-  background-color: RED;
+  background-color: #ff0787;
 }
 ::selection {
   color: #fff;
-  background-color: RED;
+  background-color: #ff0787;
 }
 ::-moz-selection {
   color: #fff;
-  background-color: RED;
+  background-color: #ff0787;
 }
 *:focus {
   outline: none;
