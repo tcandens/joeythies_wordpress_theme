@@ -1,13 +1,15 @@
 <div class="{{ [post.post_type, 'container']|join('-') }}">
-  <article class="{{ post.class }}">
-    <div class="hgroup">
-      <h1>{{ post.title }}</h1>
-      {{ post.post_excerpt }}
-    </div>
-    {% if post.thumbnail %}
-      <figure class="window">
-        <img src="{{ post.thumbnail }}" />
-      </figure>
-    {% endif %}
-  </article>
+  <a href="{{ post.link }}">
+    <article class="{{ post.class }}">
+      <div class="hgroup">
+        <h1>{{ post.title }}</h1>
+        {{ post.post_excerpt }}
+      </div>
+      {% if post.thumbnail %}
+        <figure class="window">
+          <img src="{{ post.thumbnail }}" />
+        </figure>
+      {% endif %}
+    </article>
+  </a>
 </div>

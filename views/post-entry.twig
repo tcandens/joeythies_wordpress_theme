@@ -1,5 +1,5 @@
 <div class="{{ [post.post_type, 'container']|join('-') }}">
-  <a href="{{ [ site.url, post.name ]|join('/') }}">
+  <a href="{{ post.link }}">
     <article class="{{ post.class }}">
       <h1>{{ post.title }}</h1>
       {{ post.post_excerpt }}
