@@ -40,6 +40,7 @@ class StarterSite extends TimberSite {
 	}
 
 	function add_to_context( $context ) {
+		$context['stylesheetUri'] = get_stylesheet_directory_uri();
 		return $context;
 	}
 
