@@ -1,0 +1,32 @@
+{
+  "name": "joeythies_com",
+  "version": "1.0.0",
+  "description": "WordPress theme for joeythies.com --------------------------------- Using Timber WordPress plugin.",
+  "main": "Gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "browser-sync": "^2.7.13",
+    "gulp": "^3.9.0",
+    "gulp-postcss": "^5.1.9",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-stylus": "^2.0.5",
+    "webpack-stream": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcandens/joeythies_wordpress_theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tcandens/joeythies_wordpress_theme/issues"
+  },
+  "homepage": "https://github.com/tcandens/joeythies_wordpress_theme#readme"
+}
