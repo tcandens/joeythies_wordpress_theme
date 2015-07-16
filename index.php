@@ -9,5 +9,5 @@ $args = array(
 	'post_type' => array( 'post', 'work' )
 );
 $context['posts'] = Timber::get_posts( $args );
-$context['intro'] = Timber::get_posts( array( 'pagename' => 'intro ') )[0];
+$context['intro'] = Timber::get_post("pagename=intro");
 Timber::render( 'index.twig', $context );
