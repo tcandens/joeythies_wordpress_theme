@@ -12,6 +12,5 @@
 $context = Timber::get_context();
 $post = Timber::query_post();
 $context['post'] = $post;
-$context['file'] = 'Post';
 
-Timber::render( 'single.twig', $context );
+Timber::render( 'single-post.twig', $context );

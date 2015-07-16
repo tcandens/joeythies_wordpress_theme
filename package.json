@@ -1,7 +1,7 @@
 {
   "name": "joeythies_com",
   "version": "1.0.0",
-  "description": "WordPress theme for joeythies.com --------------------------------- Using Timber WordPress plugin.",
+  "description": "WordPress theme for joeythies.com",
   "main": "Gulpfile.js",
   "directories": {
     "test": "tests"

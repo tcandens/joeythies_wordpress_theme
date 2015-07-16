@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template Name: Archives
  * The template for displaying Archive pages.
  *
  * Used to display archive-type pages if nothing more specific matches a query.

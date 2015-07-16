@@ -40,7 +40,7 @@ class StarterSite extends TimberSite {
 	}
 
 	function add_to_context( $context ) {
-		$context['stylesheetUri'] = get_stylesheet_directory_uri();
+		$context['DIRNAME'] = get_stylesheet_directory_uri();
 		return $context;
 	}
 
@@ -61,6 +61,10 @@ function myfoo( $text ) {
 	return $text;
 }
 
+function register_my_menu() {
+	register_nav_menu('nav-menu', __( 'Navigation Menu' ));
+}
+
 function enqueue_scripts() {
 	wp_enqueue_style( 'stylesheet', get_template_directory_uri() . '/main.css' );
 	wp_register_script( 'main-script', get_template_directory_uri() . '/js/main.js', array( 'jquery', 'backbone' ), false, true );
@@ -68,3 +72,4 @@ function enqueue_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
+add_action( 'init', 'register_my_menu' );
