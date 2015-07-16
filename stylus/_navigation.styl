@@ -3,8 +3,7 @@
  **************/
 
 .navigation
-  @extend .flex-container
-  flex-direction row
+  @extends .row
   justify-content space-around
   position fixed
   width 100vw
@@ -14,7 +13,7 @@
   margin 0
   z-index Z-NAVIGATION
 .nav-list
-  @extend .flex-container
+  @extends .row
   width 100%
   align-items center
   justify-content space-around
