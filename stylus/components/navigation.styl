@@ -1,9 +1,9 @@
-/**************
- * NAVIGATION STYLES
- **************/
+/***************************************************************************************
+/* Components / Navigation
+/***************************************************************************************/
 
-.navigation
-  @extends .row
+.c-navigation
+  @extends .o-row
   justify-content space-around
   position fixed
   width 100vw
@@ -12,8 +12,8 @@
   bottom 0
   margin 0
   z-index Z-NAVIGATION
-.nav-list
-  @extends .row
+.c-navigation__list
+  @extends .o-row
   width 100%
   align-items center
   justify-content space-around
@@ -22,13 +22,13 @@
   transition transform 400ms ease-in-out
   &:last-child
     padding-right 70px
-.nav-list__item
+.c-navigation__list__item
   display block
   padding 0 0.8em
   font-size 1.4em
   font-weight 700
   text-align center
-.nav-button
+.c-navigation__button
   position absolute
   bottom 0.5em
   right 0.5em

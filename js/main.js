@@ -1,6 +1,3 @@
-/**********************
- **********************/
-
 /* Break jQuery out of no-conflict mode */
 jQuery(document).ready(function($) {
 
@@ -10,9 +7,9 @@ jQuery(document).ready(function($) {
   $html.removeClass('no-js');
 
   /* Toggle State Class for Nav-Open */
-  $('.nav-button').click(function( e ) {
+  $('.js-navigation__button').click(function( e ) {
     e.preventDefault();
-    $body.toggleClass('nav-open');
+    $body.toggleClass('is-navigation-open');
   });
 
   $('.random-x').each(function( index ) {
