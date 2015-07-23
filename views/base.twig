@@ -1,11 +1,11 @@
 <!doctype html>
 <html class="no-js {{ page.classes }}" {{ site.language_attributes }}>
   <head>
-		{% include "head.twig" %}
+    {% include "head.twig" %}
   </head>
   <body class="{{ post.classes }}">
-		{% include 'navigation.twig' %}
-		{% block content %}{% endblock %}
-		{{ function('wp_footer')}}
+    {% include 'navigation.twig' %}
+    {% block content %}{% endblock %}
+    {{ function('wp_footer')}}
   </body>
 </html>
