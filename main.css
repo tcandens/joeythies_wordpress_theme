@@ -34,6 +34,7 @@ ul {
 img {
   margin: 0;
   max-width: 100%;
+  height: auto;
   border: none;
 }
 figure {
@@ -47,6 +48,10 @@ button {
   outline: none;
   border: none;
   background: transparent;
+}
+code,
+pre {
+  margin: 0;
 }
 .u-clearfix::after {
   display: table;
@@ -78,8 +83,13 @@ p {
 a {
   color: #2400b7;
 }
-a:active {
+a:active,
+a:hover {
   color: #ff0787;
+}
+code,
+pre {
+  font-family: 'source-code-pro', 'Inconsolata', Consolas, monospace;
 }
 /*********************************  #LAYOUT
 \*********************************/
@@ -177,7 +187,6 @@ a:active {
 .c-btn {
   border: 4px solid #fff;
   font-size: 1.2rem;
-  font-style: italic;
   font-weight: 800;
   text-transform: uppercase;
   padding: 0.5em;
@@ -309,6 +318,7 @@ a:active {
 }
 .c-window,
 .c-window--negative {
+  max-width: 100%;
   border-radius: 1rem 1rem 0 0;
   background-color: #fff;
   padding: 1.2rem 0 0 0;

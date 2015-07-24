@@ -40,6 +40,7 @@ class StarterSite extends TimberSite {
 	}
 
 	function add_to_context( $context ) {
+		$context['menu'] = new TimberMenu('nav-menu');
 		return $context;
 	}
 

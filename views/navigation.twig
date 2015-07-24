@@ -1,7 +1,12 @@
 <nav class="c-navigation">
   <a class="c-navigation__button js-navigation__button"></a>
-  <ul class="c-navigation__list">
-    <li class="c-navigation__list__item"><a href="#">Work</a></li>
-    <li class="c-navigation__list__item"><a href="#">Writing</a></li>
-  </ul>
+  {% if menu %}
+    <ul class="c-navigation__list">
+      {% for item in menu.get_items %}
+        <li class="c-navigation__list__item">
+          <a href="{{ item.get_link }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 </nav>

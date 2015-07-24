@@ -10,6 +10,15 @@
         <section class="c-insetbox__inner">
           {% include "logo.twig" %}
           {{ intro.content }}
+          {% if menu %}
+            <ul class="c-rowlist">
+            {% for item in menu.get_items %}
+              <a href="{{ item.get_link }}">
+                <li class="c-btn">{{ item.title }}</li>
+              </a>
+            {% endfor %}
+            </ul>
+          {% endif %}
         </section>
       </header>
     {% endif %}
