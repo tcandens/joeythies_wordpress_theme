@@ -1,14 +1,16 @@
-/***************************************************************************************
- * Components / Shadowbox
- * @ Styles container into module with lined drop-shadow
-/***************************************************************************************/
-.shadow-container
-  top 1em
-  left 1em
-  padding 0 1em 1em 0
-  margin 1em 0 1em 1em
+/*********************************\
+  Components / Shadow Box
+  @@ Creates a box-shadow of lines
+\*********************************/
+
+.c-shadowbox
+  top 1rem
+  left 1rem
+  padding 0 1rem 1rem 0
+  margin 1rem 0 1rem 1rem
   lines(BLUE, 3px, 11px, -45)
-  & > *
+  .c-shadowbox__inner
     position relative
-    margin -1em 0 0 -1em
-    padding 1em
+    margin -1rem 0 0 -1rem
+    padding 1rem
+    background-color white

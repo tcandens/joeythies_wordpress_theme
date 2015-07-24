@@ -4,10 +4,10 @@
   <div class="random-x luna-boot-scoot-container">
     <div class="luna-boot-scoot"></div>
   </div>
-  <main class="o-center" role="main">
+  <main class="o-col o-center c-buffered" role="main">
     {% if intro %}
-      <header class="header">
-        <section class="header-inner bordered">
+      <header class="o-row c-insetbox">
+        <section class="c-insetbox__inner">
           {% include "logo.twig" %}
           {{ intro.content }}
         </section>

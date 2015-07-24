@@ -1,15 +1,20 @@
-/***************************************************************************************
-/* Components / Inset Box
-/***************************************************************************************/
-.insetbox__outer
-  padding 1em
+/*********************************\
+  Components / Inset Box
+  @@ Creates a box with padded outline
+\*********************************/
+
+.c-insetbox
+  padding 1rem
   background-color MAINCOLOR
-  & > *
-    border 0.5em solid white
+  .c-insetbox__inner
+    width 100%
+    border 0.5rem solid white
+    padding 1rem
     color white
-.insetbox__outer--negative
-  padding 1em
+.c-insetbox--negative
+  padding 1rem
   background-color white
-  & > *
-    border 0.5em solid MAINCOLOR
+  .c-insetbox__inner
+    width 100%
+    border 0.5rem solid MAINCOLOR
     color MAINCOLOR

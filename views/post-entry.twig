@@ -1,6 +1,6 @@
-<div class="{{ [post.post_type, 'preview']|join('-') }}">
+<div class="c-shadowbox t-post-preview">
   <a href="{{ post.link }}">
-    <article class="{{ post.class }}">
+    <article class="c-shadowbox__inner c-borderbox {{ post.class }}">
       <h1>{{ post.title }}</h1>
       {{ post.post_excerpt }}
     </article>
