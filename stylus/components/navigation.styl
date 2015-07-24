@@ -1,6 +1,6 @@
-/***************************************************************************************
-/* Components / Navigation
-/***************************************************************************************/
+/*********************************\
+  Components / Navigation
+\*********************************/
 
 .c-navigation
   @extends .o-row
@@ -22,6 +22,8 @@
   transition transform 400ms ease-in-out
   &:last-child
     padding-right 70px
+  .is-navigation-open &
+    transform translate3d(0, 0, 0)
 .c-navigation__list__item
   display block
   padding 0 0.8em
@@ -46,3 +48,5 @@
   transition background-position 400ms ease
   transform translate3d(0, 0, 0)
   z-index Z-NAV-BUTTON
+  .is-navigation-open &
+    background-position 50% -100%

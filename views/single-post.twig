@@ -1,16 +1,21 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<div class="">
-  <div class="post-header-container">
-    <header class="post-header">
-      <h1>{{ post.title }}</h1>
-      <h3>{{ post.date }}</h3>
-      <h3>{{ post.author }}</h3>
-    </header>
-  </div>
-  <article class="post-content">
+<article class="c-single-container">
+  <header class="c-single-header--left c-shadowbox">
+    <div class="c-shadowbox__inner c-borderbox">
+      <h1 class="c-single-header__title">{{ post.title }}</h1>
+      <h2 class="c-single-header__subtitle">{{ post.date | date }}</h2>
+    </div>
+  </header>
+  <div class="c-single-content">
+    {% if post.thesis %}
+      <div class="c-single-post__excerpt">
+        {{ post.thesis }}
+      </div>
+    {% endif %}
     {{ post.content }}
-  </article>
-</div>
+  </div>
+</article>
+
 {% endblock %}
