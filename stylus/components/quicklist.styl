@@ -3,9 +3,12 @@
 \*********************************/
 
 .c-quicklist
-  margin-bottom 1rem
+  margin 1rem 0.5rem 2rem 0.5rem
   muted()
-  font-family monofont
+  font-family bodyfont
+  font-style italic
   line-height 2rem
-  list-style-type disc
-  list-style-position inside
+  li:before
+    display inline
+    content '--'
+    margin-right 0.5rem 

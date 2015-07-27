@@ -286,12 +286,16 @@ pre {
   background-position: 50% -100%;
 }
 .c-quicklist {
-  margin-bottom: 1rem;
-  color: #ff0787;
-  font-family: 'source-code-pro', 'Inconsolata', Consolas, monospace;
+  margin: 1rem 0.5rem 2rem 0.5rem;
+  color: rgba(36,0,183,0.5);
+  font-family: 'jaf-facitweb', 'Open Sans', 'Helvetica', sans-serif;
+  font-style: italic;
   line-height: 2rem;
-  list-style-type: disc;
-  list-style-position: inside;
+}
+.c-quicklist li:before {
+  display: inline;
+  content: '--';
+  margin-right: 0.5rem;
 }
 .c-rowlist {
   -webkit-justify-content: space-between;
