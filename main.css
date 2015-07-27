@@ -95,6 +95,7 @@ pre {
 \*********************************/
 .o-container,
 .o-flex-container,
+.o-fullwidth-container,
 .o-row,
 .o-row--reverse,
 .o-col,
@@ -108,6 +109,7 @@ pre {
   max-width: 100%;
 }
 .o-flex-container,
+.o-fullwidth-container,
 .o-row,
 .o-row--reverse,
 .o-col,
@@ -119,6 +121,9 @@ pre {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+.o-fullwidth-container {
+  width: 100%;
 }
 .o-row,
 .o-row--reverse,
