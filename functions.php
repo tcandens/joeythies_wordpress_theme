@@ -72,7 +72,9 @@ function add_quicktags() {
   if (wp_script_is( 'quicktags' )) {
 ?>
   <script type="text/javascript">
-  QTags.addButton( 'figure', 'figure', '<figure class="window">', '</figure>');
+    QTags.addButton( 'figure', 'figure', '<figure class="window">', '</figure>');
+    QTags.addButton( 'image', 'image', '<figure class="image">', '</figure>');
+    QTags.addButton( 'code', 'code', '<pre><code class="window">', '</code></pre>');
   </script>
 <?php
   }
@@ -83,7 +85,7 @@ add_action('admin_print_footer_scripts', 'add_quicktags');
  *Add editor quicktags on admin
  */
 function show_quicktags( $qtInit ) {
-  $qtInit['buttons'] = 'strong,em,block,ul,ol,li,link,code,fullscreen';
+  $qtInit['buttons'] = 'strong,em,block,ul,ol,li,link,fullscreen';
   return $qtInit;
 }
 add_filter('quicktags_settings', 'show_quicktags');
