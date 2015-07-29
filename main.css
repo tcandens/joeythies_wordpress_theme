@@ -356,6 +356,13 @@ pre {
   margin: 0 -0.5rem;
   margin-bottom: 2rem;
 }
+.c-code {
+  display: block;
+  min-width: 20rem;
+  max-width: 32rem;
+  white-space: pre;
+  line-height: 1rem;
+}
 /*********************************  #TEMPLATES
 \*********************************/
 .t-post-preview {

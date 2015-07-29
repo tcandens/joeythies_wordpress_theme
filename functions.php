@@ -72,9 +72,9 @@ function add_quicktags() {
   if (wp_script_is( 'quicktags' )) {
 ?>
   <script type="text/javascript">
-    QTags.addButton( 'figure', 'figure', '<figure class="window">', '</figure>');
+    QTags.addButton( 'figure', 'figure', '<figure class="c-window">', '</figure>');
     QTags.addButton( 'image', 'image', '<figure class="c-figure-image">', '</figure>');
-    QTags.addButton( 'code', 'code', '<pre><code class="window">', '</code></pre>');
+    QTags.addButton( 'mycode', 'code-window', '<div class="c-window--negative"><code class="c-code">', '</code></div>');
   </script>
 <?php
   }
