@@ -53,11 +53,6 @@ code,
 pre {
   margin: 0;
 }
-.u-clearfix::after {
-  display: table;
-  content: "";
-  clear: both;
-}
 body {
   font: 1.2rem/1.7 'jaf-facitweb', 'Open Sans', 'Helvetica', sans-serif;
   color: #2400b7;
@@ -91,6 +86,8 @@ code,
 pre {
   font-family: 'source-code-pro', 'Inconsolata', Consolas, monospace;
 }
+/*********************************  #UTILITIES
+\*********************************/
 /*********************************  #LAYOUT
 \*********************************/
 .o-container,
@@ -186,7 +183,7 @@ pre {
 .c-borderbox:active {
   border-color: #ff0787;
 }
-.c-buffered > * {
+.c-buffered-list > * {
   margin-bottom: 2rem;
 }
 .c-btn {
@@ -287,7 +284,7 @@ pre {
 }
 .c-quicklist {
   margin: 1rem 0.5rem 2rem 0.5rem;
-  color: rgba(36,0,183,0.5);
+  color: rgba(36,0,183,0.8);
   font-family: 'jaf-facitweb', 'Open Sans', 'Helvetica', sans-serif;
   font-style: italic;
   line-height: 2rem;
@@ -354,6 +351,10 @@ pre {
 .c-window--negative {
   background-color: #2400b7;
   border-color: #2400b7;
+}
+.c-figure-image {
+  margin: 0 -0.5rem;
+  margin-bottom: 2rem;
 }
 /*********************************  #TEMPLATES
 \*********************************/

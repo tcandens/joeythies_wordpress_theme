@@ -73,7 +73,7 @@ function add_quicktags() {
 ?>
   <script type="text/javascript">
     QTags.addButton( 'figure', 'figure', '<figure class="window">', '</figure>');
-    QTags.addButton( 'image', 'image', '<figure class="image">', '</figure>');
+    QTags.addButton( 'image', 'image', '<figure class="c-figure-image">', '</figure>');
     QTags.addButton( 'code', 'code', '<pre><code class="window">', '</code></pre>');
   </script>
 <?php
