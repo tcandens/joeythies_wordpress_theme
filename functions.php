@@ -72,9 +72,8 @@ function add_quicktags() {
   if (wp_script_is( 'quicktags' )) {
 ?>
   <script type="text/javascript">
-    QTags.addButton( 'figure', 'figure', '<figure class="c-window">', '</figure>');
     QTags.addButton( 'image', 'image', '<figure class="c-figure-image">', '</figure>');
-    QTags.addButton( 'mycode', 'code-window', '<div class="c-window--negative"><code class="c-code">', '</code></div>');
+    QTags.addButton( 'window', 'window', '<div class="c-window--negative">', '</div>');
   </script>
 <?php
   }

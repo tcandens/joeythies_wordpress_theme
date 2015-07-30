@@ -73,7 +73,8 @@ h2 {
 }
 p {
   margin: 0 0 1em 0;
-  max-width: 32rem;
+  max-width: 42rem;
+  text-indent: 2rem;
 }
 a {
   color: #2400b7;
@@ -324,8 +325,10 @@ pre {
 }
 .c-window,
 .c-window--negative {
+  width: 50rem;
   max-width: 100%;
   border-radius: 1rem 1rem 0 0;
+  margin-bottom: 2rem;
   background-color: #fff;
   padding: 1.2rem 0 0 0;
   border: 0.5rem solid #fff;
