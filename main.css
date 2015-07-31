@@ -54,7 +54,7 @@ pre {
   margin: 0;
 }
 body {
-  font: 1.2rem/1.7 'jaf-facitweb', 'Open Sans', 'Helvetica', sans-serif;
+  font: 1rem/1.6 'jaf-facitweb', 'Open Sans', 'Helvetica', sans-serif;
   color: #2400b7;
 }
 h1,
@@ -64,6 +64,7 @@ h3 {
   margin-bottom: 0.25em;
   font-family: 'jaf-lapture', 'Alegreya', Georgia, 'Times New Roman', serif;
   font-weight: 300;
+  line-height: 1.2;
 }
 h1 {
   font-size: 2rem;
@@ -73,6 +74,7 @@ h2 {
 }
 p {
   margin: 0 0 1em 0;
+  width: 100%;
   max-width: 42rem;
   text-indent: 2rem;
 }
@@ -100,8 +102,8 @@ pre {
 .c-navigation,
 .c-navigation__list,
 .c-rowlist,
-.c-single-container,
-.c-single-content {
+.c-single,
+.c-single__content {
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
@@ -114,8 +116,8 @@ pre {
 .c-navigation,
 .c-navigation__list,
 .c-rowlist,
-.c-single-container,
-.c-single-content {
+.c-single,
+.c-single__content {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -142,8 +144,8 @@ pre {
           flex-direction: row-reverse;
 }
 .o-col,
-.c-single-container,
-.c-single-content {
+.c-single,
+.c-single__content {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -154,8 +156,8 @@ pre {
           flex-direction: column-reverse;
 }
 .o-center,
-.c-single-container,
-.c-single-content {
+.c-single,
+.c-single__content {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -177,12 +179,24 @@ pre {
   stroke-width: 4px;
   fill: none;
 }
-.c-borderbox {
+.c-logo--home .c-logo__jt {
+  fill: #2400b7;
+}
+.c-logo--home .c-logo__circle {
+  stroke: #2400b7;
+}
+.c-borderbox,
+.c-borderbox--negative {
   border: 0.5em solid #2400b7;
   background-color: #fff;
 }
-.c-borderbox:active {
+.c-borderbox:active,
+.c-borderbox--negative:active {
   border-color: #ff0787;
+}
+.c-borderbox--negative {
+  border-color: #fff;
+  background-color: #2400b7;
 }
 .c-buffered-list > * {
   margin-bottom: 2rem;
@@ -303,7 +317,8 @@ pre {
 .c-rowlist > li {
   display: inline;
 }
-.c-shadowbox {
+.c-shadowbox,
+.c-shadowbox--negative {
   top: 1rem;
   left: 1rem;
   padding: 0 1rem 1rem 0;
@@ -311,16 +326,25 @@ pre {
   background-image: repeating-linear-gradient(-45deg, #2400b7, #2400b7 3px, transparent 4px, transparent 11px);
   -webkit-background-size: 16px 16px;
 }
-.c-shadowbox .c-shadowbox__inner {
+.c-shadowbox .c-shadowbox__inner,
+.c-shadowbox--negative .c-shadowbox__inner {
   position: relative;
   margin: -1rem 0 0 -1rem;
   padding: 1rem;
   background-color: #fff;
 }
-.c-single-container {
+.c-shadowbox--negative {
+  background-image: repeating-linear-gradient(-45deg, #fff, #fff 3px, transparent 4px, transparent 11px);
+  -webkit-background-size: 16px 16px;
+}
+.c-shadowbox--negative .c-shadowbox__inner {
+  background-color: #2400b7;
+  color: #fff;
+}
+.c-single {
   margin: 1rem 0.5rem;
 }
-.c-single-content {
+.c-single__content {
   width: 100%;
 }
 .c-window,
@@ -366,8 +390,12 @@ pre {
   white-space: pre;
   line-height: 1rem;
 }
-/*********************************  #TEMPLATES
+/*********************************  #templates
 \*********************************/
+.type-work {
+  background-color: #2400b7;
+  color: #fff;
+}
 .t-post-preview {
   max-width: 20rem;
 }

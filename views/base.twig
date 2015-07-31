@@ -3,7 +3,7 @@
   <head>
     {% include "head.twig" %}
   </head>
-  <body class="{{ post.classes }}">
+  <body class="{{ post.class }}">
     {% include 'navigation.twig' %}
     {% block content %}{% endblock %}
     {{ function('wp_footer')}}

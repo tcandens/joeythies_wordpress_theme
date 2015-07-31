@@ -8,9 +8,15 @@
   left 1rem
   padding 0 1rem 1rem 0
   margin 1rem 0 1rem 1rem
-  lines(BLUE, 3px, 11px, -45)
+  lines(MAINCOLOR, 3px, 11px, -45)
   .c-shadowbox__inner
     position relative
     margin -1rem 0 0 -1rem
     padding 1rem
     background-color white
+.c-shadowbox--negative
+  @extends .c-shadowbox
+  lines(white, 3px, 11px, -45)
+  .c-shadowbox__inner
+    background-color MAINCOLOR
+    color white

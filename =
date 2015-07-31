@@ -2,13 +2,6 @@
   <a class="c-navigation__button js-navigation__button"></a>
   {% if menu %}
     <ul class="c-navigation__list">
-      {% if is_home == false %}
-        <li class="c-navigation__list__item">
-          <a class="c-navigation__home" href="{{ site.url }}">
-            Home
-          </a>
-        </li>
-      {% endif %}
       {% for item in menu.get_items %}
         <li class="c-navigation__list__item">
           <a href="{{ item.get_link }}">{{ item.title }}</a>
