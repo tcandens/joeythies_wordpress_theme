@@ -179,12 +179,6 @@ pre {
   stroke-width: 4px;
   fill: none;
 }
-.c-logo--home .c-logo__jt {
-  fill: #2400b7;
-}
-.c-logo--home .c-logo__circle {
-  stroke: #2400b7;
-}
 .c-borderbox,
 .c-borderbox--negative {
   border: 0.5em solid #2400b7;
@@ -255,6 +249,9 @@ pre {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   background-image: url("images/whitedot.png");
   -webkit-transform: translate3d(0, 80px, 0);
           transform: translate3d(0, 80px, 0);
@@ -274,15 +271,18 @@ pre {
   font-size: 1.4em;
   font-weight: 700;
   text-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .c-navigation__button {
   position: absolute;
-  bottom: 0.5em;
+  bottom: 0.8em;
   right: 0.5em;
   cursor: pointer;
   width: 60px;
   height: 60px;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.3);
   border-radius: 50%;
   background-image: radial-gradient(#2400b7 45%, transparent 50%);
   background-repeat: repeat-y;
@@ -296,6 +296,22 @@ pre {
 }
 .is-navigation-open .c-navigation__button {
   background-position: 50% -100%;
+}
+.c-navigation__logo .c-logo {
+  width: 60px;
+  height: 60px;
+}
+.c-navigation__logo .c-logo__jt {
+  fill: #2400b7;
+}
+.c-navigation__logo .c-logo__circle {
+  stroke: #2400b7;
+}
+.c-navigation__logo:hover .c-logo__jt {
+  fill: #ff0787;
+}
+.c-navigation__logo:hover .c-logo__circle {
+  stroke: #ff0787;
 }
 .c-quicklist {
   margin: 1rem 0.5rem 2rem 0.5rem;
@@ -403,6 +419,9 @@ pre {
   padding: 1rem;
   color: #fff;
   background-color: #2400b7;
+}
+.t-work-preview > a {
+  max-width: 100%;
 }
 .t-work-preview__hgroup {
   margin-bottom: 1rem;

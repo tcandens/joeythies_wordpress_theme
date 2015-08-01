@@ -17,6 +17,7 @@
   width 100%
   align-items center
   justify-content space-around
+  flex-wrap nowrap
   background-image url('images/whitedot.png')
   transform translate3d(0, 80px, 0)
   transition transform 400ms ease-in-out
@@ -30,14 +31,15 @@
   font-size 1.4em
   font-weight 700
   text-align center
+  align-items center
 .c-navigation__button
   position absolute
-  bottom 0.5em
+  bottom 0.8em
   right 0.5em
   cursor pointer
   width width = 60px
   height width
-  background-color alpha(white, 50%)
+  background-color alpha(white, 30%)
   border-radius 50%
   background-image radial-gradient(MAINCOLOR 45%, transparent 50%)
   background-repeat repeat-y
@@ -50,3 +52,16 @@
   z-index Z-NAV-BUTTON
   .is-navigation-open &
     background-position 50% -100%
+.c-navigation__logo
+  .c-logo
+    width 60px
+    height 60px
+  .c-logo__jt
+    fill MAINCOLOR
+  .c-logo__circle
+    stroke MAINCOLOR
+  &:hover
+    .c-logo__jt
+      fill RED
+    .c-logo__circle
+      stroke RED

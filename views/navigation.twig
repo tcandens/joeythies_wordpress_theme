@@ -4,8 +4,8 @@
     <ul class="c-navigation__list">
       {% if is_home == false %}
         <li class="c-navigation__list__item">
-          <a class="c-navigation__home" href="{{ site.url }}">
-            Home
+          <a class="c-navigation__logo" href="{{ site.url }}">
+            {% include 'logo.twig' %}
           </a>
         </li>
       {% endif %}
