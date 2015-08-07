@@ -420,6 +420,8 @@ pre {
 }
 .t-work-preview {
   padding: 1rem;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
   color: #fff;
   background-color: #2400b7;
 }
