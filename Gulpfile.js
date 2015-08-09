@@ -12,6 +12,10 @@ gulp.task('stylus:dev', function() {
   return gulp.src([ 'stylus/main.styl' ])
     .pipe(sourcemaps.init())
     .pipe(stylus())
+    .on('error', function(err) {
+      console.log(err + '/n' + 'Stylus Error!');
+      this.emit('end');
+    })
     .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./'))

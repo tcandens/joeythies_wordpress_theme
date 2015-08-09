@@ -169,7 +169,7 @@ pre {
       -ms-flex-align: center;
           align-items: center;
 }
-/*********************************  #COMPONENTS
+/*********************************  #SCOPES
 \*********************************/
 .s-darkfield {
   color: #fff;
@@ -178,6 +178,11 @@ pre {
 .s-darkfield .c-single a {
   color: #fff;
 }
+.s-darkfield .c-tags__tag:after {
+  background: radial-gradient(circle at 3px 50%, #2400b7 0, #2400b7 3px, transparent 3px, transparent 100%);
+}
+/*********************************  #COMPONENTS
+\*********************************/
 .c-logo {
   width: 70px;
   height: 70px;
@@ -473,7 +478,7 @@ pre {
   left: 100%;
   width: 1rem;
   height: 100%;
-  background: radial-gradient(circle at 3px 50%, #2400b7 0, #2400b7 3px, transparent 3px, transparent 100%);
+  background: radial-gradient(circle at 3px 50%, #fff 0, #fff 3px, transparent 3px, transparent 100%);
 }
 /*********************************  #templates
 \*********************************/
@@ -514,6 +519,9 @@ pre {
 }
 .type-work .c-single a:hover:after {
   background-position: 0 -3px;
+}
+.type-work .c-tags__tag:after {
+  background: radial-gradient(circle at 3px 50%, #2400b7 0, #2400b7 3px, transparent 3px, transparent 100%);
 }
 
 /*# sourceMappingURL=main.css.map */
