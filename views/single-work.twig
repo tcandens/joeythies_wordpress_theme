@@ -5,7 +5,13 @@
   <header class="c-single__header--left c-shadowbox--negative">
     <div class="c-shadowbox__inner c-borderbox--negative">
       <h1 class="c-single__header-title">{{ post.title }}</h1>
-      <h2 class="c-single__header-subtitle">{{ post.date | date }}</h2>
+      <ul class="c-tags">
+        {% if post.terms() %}
+          {% for term in post.terms() %}
+            <li class="c-tags__tag">{{ term.name }}</li>
+          {% endfor %}
+        {% endif %}
+      </ul>
     </div>
   </header>
   <div class="c-single__content">

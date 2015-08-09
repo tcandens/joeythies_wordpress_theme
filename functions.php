@@ -24,19 +24,28 @@ class StarterSite extends TimberSite {
     //this is where you can register custom post types
     register_post_type( 'work',
       array(
-          'labels' => array(
-            'name' => 'Work',
-            'singular_name' => 'Work'
-          ),
-          'public' => true,
-          'menu_position' => 5,
-          'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' )
+        'labels' => array(
+          'name' => 'Work',
+          'singular_name' => 'Work'
+        ),
+        'taxonomies' => array('category', 'post_tag'),
+        'public' => true,
+        'menu_position' => 5,
+        'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' )
       )
     );
   }
 
   function register_taxonomies() {
     //this is where you can register custom taxonomies
+    register_taxonomy(
+      'duty',
+      'work',
+      array(
+        'label' => __( 'Duties' ),
+        'hierarchical' => false
+      )
+    );
   }
 
   function add_to_context( $context ) {
