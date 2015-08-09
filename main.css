@@ -168,9 +168,12 @@ pre {
 }
 /*********************************  #COMPONENTS
 \*********************************/
-.c-darkfield {
+.s-darkfield {
   color: #fff;
   background-color: #2400b7;
+}
+.s-darkfield .c-single a {
+  color: #fff;
 }
 .c-logo {
   width: 70px;
@@ -449,6 +452,28 @@ pre {
   margin-bottom: 1rem;
   color: #fff;
 }
-@include .c-darkfield;
+.type-work {
+  color: #fff;
+  background-color: #2400b7;
+}
+.type-work .c-single a {
+  color: #fff;
+  position: relative;
+  display: inline;
+}
+.type-work .c-single a:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: -1px;
+  background-image: url("images/underline.gif");
+  background-repeat: repeat-x;
+}
+.type-work .c-single a:hover:after {
+  background-position: 0 -3px;
+}
 
 /*# sourceMappingURL=main.css.map */
