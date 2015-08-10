@@ -1,15 +1,13 @@
-<div class="o-fullwidth-container s-darkfield t-work-preview">
+<article class="o-fullwidth-container s-darkfield t-work-preview">
   <a href="{{ post.link }}">
-    <article class="{{ post.class }}">
-      <div class="t-work-preview__hgroup">
-        <h1><span class="c-underline">{{ post.title }}</span></h1>
-        {{ post.post_excerpt }}
-      </div>
-      {% if post.thumbnail %}
-        <figure class="c-window t-work-preview__thumbnail">
-          <img src="{{ post.thumbnail }}" />
-        </figure>
-      {% endif %}
-    </article>
+    <div class="t-work-preview__hgroup">
+      <h1><span class="c-underline">{{ post.title }}</span></h1>
+      {{ post.post_excerpt }}
+    </div>
+    {% if post.thumbnail %}
+      <figure class="c-window t-work-preview__thumbnail">
+        <img src="{{ post.thumbnail }}" />
+      </figure>
+    {% endif %}
   </a>
-</div>
+</article>
