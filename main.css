@@ -23,6 +23,7 @@
 html,
 body {
   margin: 0;
+  height: 100%;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -161,9 +162,6 @@ pre {
 .o-center,
 .c-single,
 .c-single__content {
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -382,6 +380,12 @@ pre {
 }
 .c-single__content {
   width: 100%;
+  min-height: 100%;
+}
+.c-single__home,
+.c-single__home--left,
+.c-single__home--right {
+  position: static;
 }
 .c-window,
 .c-window--negative {
