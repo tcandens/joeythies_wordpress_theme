@@ -3,3 +3,6 @@ tags
 vendor
 wp-content
 node_modules
+**/*.lock
+
+main.css
