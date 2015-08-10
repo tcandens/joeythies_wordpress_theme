@@ -5,10 +5,10 @@
   <header class="c-single__header--left c-shadowbox--negative">
     <div class="c-shadowbox__inner c-borderbox--negative">
       <h1 class="c-single__header-title">{{ post.title }}</h1>
-      <ul class="c-tags">
+      <ul class="c-rowlist">
         {% if post.terms() %}
           {% for term in post.terms() %}
-            <li class="c-tags__tag">{{ term.name }}</li>
+            <li class="c-tag">{{ term.name }}</li>
           {% endfor %}
         {% endif %}
       </ul>
