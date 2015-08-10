@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
   $html.removeClass('no-js');
 
   /* Toggle State Class for Nav-Open */
-  $('.js-navigation__button').click(function( e ) {
+  $('.js-navigation-button').click(function( e ) {
     e.preventDefault();
     $body.toggleClass('is-navigation-open');
   });

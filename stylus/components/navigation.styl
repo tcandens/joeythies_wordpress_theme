@@ -2,41 +2,8 @@
   Components / Navigation
 \*********************************/
 
-.c-navigation
-  @extends .o-row
-  justify-content space-around
+.c-navigation-button
   position fixed
-  width 100vw
-  height 80px
-  left 0
-  bottom 0
-  margin 0
-  z-index Z-NAVIGATION
-.c-navigation__list
-  @extends .o-row
-  width 100%
-  align-items center
-  justify-content space-around
-  flex-wrap nowrap
-  //background-image url('images/whitedot.png')
-  background-color white
-  transform translate3d(0, 80px, 0)
-  transition transform 400ms ease-in-out,
-             box-shadow 400ms ease-in-out
-  &:last-child
-    padding-right 70px
-  .is-navigation-open &
-    box-shadow 0 0 2em alpha(MAINCOLOR, 50%)
-    transform translate3d(0, 0, 0)
-.c-navigation__list__item
-  display block
-  padding 0 0.8em
-  font-size 1.4em
-  font-weight 700
-  text-align center
-  align-items center
-.c-navigation__button
-  position absolute
   bottom 0.6em
   right 0.5em
   cursor pointer
@@ -46,7 +13,7 @@
   border-radius 50%
   background-image radial-gradient(MAINCOLOR 45%, transparent 50%)
   background-repeat repeat-y
-  // Changed state on nav-open
+  // Change state on is-navigation-open
   background-size (width / 3) (width / 3)
   background-position 50% 50%
   overflow hidden
@@ -55,6 +22,36 @@
   z-index Z-NAV-BUTTON
   .is-navigation-open &
     background-position 50% -100%
+.c-navigation
+  position fixed
+  left 0
+  bottom 0
+  width 100%
+  height 80px
+  margin 0
+  transform translate3d(0, 80px, 0)
+  transition transform 400ms ease-in-out
+  z-index Z-NAVIGATION
+  .is-navigation-open &
+    box-shadow 0 0 2em alpha(MAINCOLOR, 50%)
+    transform translate3d(0, 0, 0)
+.c-navigation__list
+  @extends .o-row
+  width 100%
+  height 100%
+  align-items center
+  justify-content space-around
+  flex-wrap nowrap
+  background-color white
+  &:last-child
+    padding-right 70px
+.c-navigation__list__item
+  display block
+  padding 0 0.8em
+  font-size 1.4em
+  font-weight 700
+  text-align center
+  align-items center
 .c-navigation__logo
   @extends .o-flex-container
   height 100%
