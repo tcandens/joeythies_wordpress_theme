@@ -18,12 +18,15 @@
   align-items center
   justify-content space-around
   flex-wrap nowrap
-  background-image url('images/whitedot.png')
+  //background-image url('images/whitedot.png')
+  background-color white
   transform translate3d(0, 80px, 0)
-  transition transform 400ms ease-in-out
+  transition transform 400ms ease-in-out,
+             box-shadow 400ms ease-in-out
   &:last-child
     padding-right 70px
   .is-navigation-open &
+    box-shadow 0 0 2em alpha(BLUE, 50%)
     transform translate3d(0, 0, 0)
 .c-navigation__list__item
   display block
@@ -34,7 +37,7 @@
   align-items center
 .c-navigation__button
   position absolute
-  bottom 0.8em
+  bottom 0.6em
   right 0.5em
   cursor pointer
   width width = 60px
@@ -53,6 +56,8 @@
   .is-navigation-open &
     background-position 50% -100%
 .c-navigation__logo
+  @extends .o-flex-container
+  height 100%
   .c-logo
     width 60px
     height 60px

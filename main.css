@@ -105,6 +105,7 @@ pre {
 .o-col,
 .c-navigation,
 .c-navigation__list,
+.c-navigation__logo,
 .c-rowlist,
 .c-single,
 .c-single__content,
@@ -120,6 +121,7 @@ pre {
 .o-col,
 .c-navigation,
 .c-navigation__list,
+.c-navigation__logo,
 .c-rowlist,
 .c-single,
 .c-single__content,
@@ -274,16 +276,17 @@ pre {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-  background-image: url("images/whitedot.png");
+  background-color: #fff;
   -webkit-transform: translate3d(0, 80px, 0);
           transform: translate3d(0, 80px, 0);
-  transition: -webkit-transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out, box-shadow 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, box-shadow 400ms ease-in-out;
 }
 .c-navigation__list:last-child {
   padding-right: 70px;
 }
 .is-navigation-open .c-navigation__list {
+  box-shadow: 0 0 2em rgba(36,0,183,0.5);
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
@@ -299,7 +302,7 @@ pre {
 }
 .c-navigation__button {
   position: absolute;
-  bottom: 0.8em;
+  bottom: 0.6em;
   right: 0.5em;
   cursor: pointer;
   width: 60px;
@@ -318,6 +321,9 @@ pre {
 }
 .is-navigation-open .c-navigation__button {
   background-position: 50% -100%;
+}
+.c-navigation__logo {
+  height: 100%;
 }
 .c-navigation__logo .c-logo {
   width: 60px;
