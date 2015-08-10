@@ -461,11 +461,12 @@ pre {
   height: 1.75rem;
   font-size: 0.5rem;
   font-family: 'source-code-pro', 'Inconsolata', Consolas, monospace;
+  font-weight: 900;
   text-transform: uppercase;
   margin-right: 1.5rem;
   padding: 0.25rem 0.75rem;
   color: #2400b7;
-  background-color: #74cd6a;
+  background-color: #260d10;
 }
 .c-tags__tag:before {
   content: '';
@@ -477,7 +478,7 @@ pre {
   height: 0;
   border-style: solid;
   border-width: 0.875rem 0 0.875rem 1rem;
-  border-color: transparent transparent transparent #74cd6a;
+  border-color: transparent transparent transparent #260d10;
 }
 .c-tags__tag:after {
   content: '';
