@@ -359,8 +359,8 @@ pre {
   left: 1rem;
   padding: 0 1rem 1rem 0;
   margin: 1rem 0 1rem 1rem;
-  background-image: repeating-linear-gradient(-45deg, #2400b7, #2400b7 3px, transparent 4px, transparent 11px);
-  -webkit-background-size: 16px 16px;
+  background-image: repeating-linear-gradient(-45deg, #2400b7, #2400b7 2px, transparent 3px, transparent 9px);
+  -webkit-background-size: 13px 13px;
 }
 .c-shadowbox .c-shadowbox__inner,
 .c-shadowbox--negative .c-shadowbox__inner {
@@ -370,8 +370,8 @@ pre {
   background-color: #fff;
 }
 .c-shadowbox--negative {
-  background-image: repeating-linear-gradient(-45deg, #fff, #fff 3px, transparent 4px, transparent 11px);
-  -webkit-background-size: 16px 16px;
+  background-image: repeating-linear-gradient(-45deg, #fff, #fff 2px, transparent 3px, transparent 9px);
+  -webkit-background-size: 13px 13px;
 }
 .c-shadowbox--negative .c-shadowbox__inner {
   background-color: #2400b7;
