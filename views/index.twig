@@ -1,9 +1,6 @@
 {% extends "base.twig" %}
 
 {% block content %}
-  <div class="random-x c-luna-sprite__container">
-    <div class="c-luna-sprite__sprite"></div>
-  </div>
   <main class="o-col o-center | t-main" role="main">
     {% if intro %}
       <header class="o-row c-insetbox">
@@ -25,5 +22,8 @@
     {% for post in posts %}
       {% include post.post_type~"-preview.twig" %}
     {% endfor %}
+    <div class="random-x c-luna-sprite__container">
+      <div class="c-luna-sprite__sprite"></div>
+    </div>
   </main>
 {% endblock %}
