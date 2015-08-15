@@ -13,7 +13,7 @@
   z-index Z-ANIMATIONS
   background url('images/luna-boot-scoot.png') 0 0
   animation play-luna-boot-scoot 600ms steps(4) infinite,
-            play-across-window 10s linear infinite
+            play-across-window__small 20s linear infinite
 @keyframes play-luna-boot-scoot
   0% {
     background-position 0 0
@@ -21,10 +21,19 @@
   100% {
     background-position -240px
   }
-@keyframes play-across-window
+@keyframes play-across-window__small
   0% {
     right -60px
+    transform scaleX(1)
+  }
+  50% {
+    right calc(100% + 60px)
+    transform scaleX(1)
+  }
+  51% {
+    transform scaleX(-1)
   }
   100% {
-    right calc(100% + 60px)
+    right -60px
+    transform scaleX(-1)
   }
