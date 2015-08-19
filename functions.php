@@ -7,6 +7,14 @@ if ( ! class_exists( 'Timber' ) ) {
   return;
 }
 
+if ( class_exists( 'Timber' ) ) {
+  Timber::add_route( 'writing', function( $params ) {
+    $page = 0;
+    $query = array( 'post_type' => 'post', 'posts_per_page' => 10, 'offset' => $page * 10 );
+    Timber::load_template( 'archive-writing.php', $query );
+  });
+}
+
 class StarterSite extends TimberSite {
 
   function __construct() {
@@ -60,10 +68,11 @@ class StarterSite extends TimberSite {
     $twig->addFilter( 'myfoo', new Twig_Filter_Function( 'myfoo' ) );
     return $twig;
   }
-  
+
 }
 
 new StarterSite();
+
 
 function myfoo( $text ) {
   $text .= ' bar!';
