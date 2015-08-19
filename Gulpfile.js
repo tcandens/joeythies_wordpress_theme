@@ -24,7 +24,8 @@ gulp.task('stylus:dev', function() {
 
 gulp.task('serve:dev', function() {
   browserSync.init({
-    proxy: 'localhost/wordpress'
+    proxy: 'src.wordpress-develop.dev',
+    port: 7133
   })
 });
 
