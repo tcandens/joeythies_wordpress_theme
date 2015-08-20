@@ -1,20 +1,22 @@
 {% extends 'base.twig' %}
 
 {% block content %}
-  <div class="o-grid__minor-left s-darkfield c-archive-header u-spacer">
-    <h1 class="u-lrg">{{ title }}</h1>
-    <ul class="c-rowlist c-archive-header__categories">
-      {% if categories %}
-        {% for category in categories %}
-          <li class="c-tag">{{ category.name }}</li>
-        {% endfor %}
-      {% endif %}
-    </ul>
-  </div>
-  <div class="o-col o-center o-grid__major-right">
-    {% for post in posts %}
-      {% include 'post-preview.twig' %}
-    {% endfor %}
+  <div class="o-grid__container">
+    <div class="o-grid__minor-left s-darkfield c-archive-header">
+      <h1 class="u-lrg">{{ title }}</h1>
+      <ul class="c-rowlist c-archive-header__categories">
+        {% if categories %}
+          {% for category in categories %}
+            <li class="c-tag">{{ category.name }}</li>
+          {% endfor %}
+        {% endif %}
+      </ul>
+    </div>
+    <div class="o-col o-center o-grid__major-right">
+      {% for post in posts %}
+        {% include 'post-preview.twig' %}
+      {% endfor %}
+    </div>
   </div>
 {% endblock %}
 

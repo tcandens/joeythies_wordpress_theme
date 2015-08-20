@@ -2,13 +2,6 @@
 // MIXINS
 // ------
 
-// Media-query mixin
-// Use: +media-query( { conditions }, { OPTIONAL, media } )
-media-query( condition, media = screen )
-  query = media + " and " + "(" + condition + ")"
-  @media query
-    {block}
-
 // Stripe background patterns
 // Returns the complimentary angle
 complimentary-angle(A)
@@ -36,3 +29,36 @@ lines(color, line-width, gradient-width, angle = 30)
   box-width = sine-law(90, gradient-width, angle)
   box-height = sine-law(angle, box-width, comp-angle)
   -webkit-background-size: unit(box-width, 'px') unit(box-height, 'px')
+
+// Define the cache and the aliases
+$media_cache = {}
+$media_aliases = {
+  med:  '(min-width: 720px)'
+}
+
+// Mixin for caching the blocks with the given conditions
+media($condition)
+  helper($condition)
+    unless $media_cache[$condition]
+      $media_cache[$condition] = ()
+    push($media_cache[$condition], block)
+
+  +helper($condition)
+    {selector() + ''}
+      {block}
+
+// Function we would use to call all the cached styles
+apply_media_cache()
+  for $media, $blocks in $media_cache
+    $media = unquote($media_aliases[$media] || $media)
+    $media = '(%s)' % $media unless match('\(', $media)
+    $media = 'only screen and %s' % $media
+    @media $media
+      for $block in $blocks
+        {$block}
+
+// Here would be our main styles, using the `media` mixin
+// …
+
+// Here we call all the cached styles
+apply_media_cache()

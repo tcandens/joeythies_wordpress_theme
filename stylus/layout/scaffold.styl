@@ -12,19 +12,27 @@
 .o-fullwidth-container
   @extends .o-flex-container
   width 100%
-.o-row
+o-row()
   @extends .o-flex-container
   width 100%
   flex-direction row
   flex-wrap wrap
-.o-row--reverse
+.o-row
+  o-row()
+o-row--reverse()
   @extends .o-row
   flex-direction row-reverse
-.o-col
+.o-row--reverse
+  o-row--reverse()
+o-col()
   @extends .o-flex-container
   flex-direction column
-.o-col--reverse
+.o-col
+  o-col()
+o-col--reverse()
   flex-direction column-reverse
+.o-col--reverse
+  o-col--reverse()
 .o-center
   //justify-content center
   align-items center

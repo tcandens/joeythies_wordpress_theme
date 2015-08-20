@@ -2,8 +2,21 @@
   Layout / Grid
 \***********************/
 
-.o-grid__minor-right
-  width 100%
+.o-grid__container
+  min-height 100%
+  o-col()
+  @media screen and (min-width: 720px)
+    o-row()
+.o-grid__container--reverse
+  @media screen and (min-width: 720px)
+    o-row--reverse()
 
-.o-grid__major-left
-  width 100%
+SIDEWIDTH = 8rem
+[class^='o-grid__minor']
+  @media screen and (min-width: 720px)
+    flex-basis 10rem
+    background GREEN
+[class^='o-grid__major']
+  @media screen and (min-width: 720px)
+    background yellow
+    flex-basis auto
