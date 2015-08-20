@@ -1,17 +1,17 @@
 {% extends 'base.twig' %}
 
 {% block content %}
-  <div class="">
-    <h1>{{ title }}</h1>
-    <ul class="c-rowlist">
-      {% if post.terms() %}
-        {% for term in post.terms() %}
-          <li class="c-tag">{{ term.name }}</li>
+  <div class="o-grid__minor-right c-archive-header">
+    <h1 class="c-archive-header__title u-lrg">{{ title }}</h1>
+    <ul class="c-rowlist c-archive-header__categories">
+      {% if categories %}
+        {% for category in categories %}
+          <li class="c-tag">{{ category.name }}</li>
         {% endfor %}
       {% endif %}
     </ul>
   </div>
-  <div class="s-darkfield">
+  <div class="o-grid__major-left s-darkfield">
     {% for post in posts %}
       {% include 'work-preview.twig' %}
     {% endfor %}

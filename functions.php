@@ -13,6 +13,10 @@ if ( class_exists( 'Timber' ) ) {
     $query = array( 'post_type' => 'post', 'posts_per_page' => 10, 'offset' => $page * 10 );
     Timber::load_template( 'archive-writing.php', $query );
   });
+  Timber::add_route( 'work', function( $params ) {
+    $query = array( 'post_type' => 'work' );
+    Timber::load_template( 'archive-work.php', $query );
+  });
 }
 
 class StarterSite extends TimberSite {
@@ -57,7 +61,6 @@ class StarterSite extends TimberSite {
   }
 
   function add_to_context( $context ) {
-    $context['menu'] = new TimberMenu('nav-menu');
     $context['is_home'] = is_home();
     return $context;
   }

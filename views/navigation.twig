@@ -1,19 +1,18 @@
 <button class="c-navigation-button js-navigation-button"></button>
 <nav class="c-navigation">
-  {% if menu %}
-    <ul class="c-navigation__list">
-      {% if is_home == false %}
-        <li class="c-navigation__list__item">
-          <a class="c-navigation__logo" href="{{ site.url }}">
-            {% include 'logo.twig' %}
-          </a>
-        </li>
-      {% endif %}
-      {% for item in menu.get_items %}
-        <li class="c-navigation__list__item">
-          <a href="{{ item.get_link }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+  <ul class="c-navigation__list">
+    {% if is_home == false %}
+      <li class="c-navigation__list__item">
+        <a class="c-navigation__logo" href="{{ site.url }}">
+          {% include 'logo.twig' %}
+        </a>
+      </li>
+    {% endif %}
+    <li class="c-navigation__list__item">
+      <a href="{{ site.url }}/work">Work</a>
+    </li>
+    <li class="c-navigation__list__item">
+      <a href="{{ site.url }}/writing">Writing</a>
+    </li>
+  </ul>
 </nav>

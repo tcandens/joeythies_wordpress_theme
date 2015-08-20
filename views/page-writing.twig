@@ -1,10 +1,17 @@
 {% extends 'base.twig' %}
 
 {% block content %}
-  <div class="s-darkfield">
-    <h1>{{ title }}</h1>
+  <div class="o-grid__minor-left s-darkfield c-archive-header u-spacer">
+    <h1 class="u-lrg">{{ title }}</h1>
+    <ul class="c-rowlist c-archive-header__categories">
+      {% if categories %}
+        {% for category in categories %}
+          <li class="c-tag">{{ category.name }}</li>
+        {% endfor %}
+      {% endif %}
+    </ul>
   </div>
-  <div class="o-col o-center">
+  <div class="o-col o-center o-grid__major-right">
     {% for post in posts %}
       {% include 'post-preview.twig' %}
     {% endfor %}
