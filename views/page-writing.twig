@@ -2,7 +2,7 @@
 
 {% block content %}
   <div class="o-grid__container">
-    <div class="o-grid__minor-left s-darkfield c-archive-header">
+    <div class="o-grid__minor-left | s-darkfield | c-archive-header">
       <h1 class="u-lrg">{{ title }}</h1>
       <ul class="c-rowlist c-archive-header__categories">
         {% if categories %}
@@ -12,7 +12,7 @@
         {% endif %}
       </ul>
     </div>
-    <div class="o-col o-center o-grid__major-right">
+    <div class="o-grid__major-right o-col o-center | u-padded">
       {% for post in posts %}
         {% include 'post-preview.twig' %}
       {% endfor %}

@@ -9,9 +9,9 @@
           {{ intro.content }}
           {% if menu %}
             <ul class="c-rowlist">
-            {% for item in menu.get_items %}
-              <a href="{{ item.get_link }}">
-                <li class="c-btn">{{ item.title }}</li>
+            {% for item in menu %}
+              <a href="{{ [ site.url, item.link ]|join('/') }}">
+                <li class="c-btn">{{ item.name }}</li>
               </a>
             {% endfor %}
             </ul>

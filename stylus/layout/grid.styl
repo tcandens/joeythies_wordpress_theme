@@ -8,15 +8,16 @@
   @media screen and (min-width: 720px)
     o-row()
 .o-grid__container--reverse
+  flex-wrap nowrap
   @media screen and (min-width: 720px)
     o-row--reverse()
 
-SIDEWIDTH = 8rem
-[class^='o-grid__minor']
+[class*="o-grid__minor"]
+  width 100%
+  //flex 0 1 100%
   @media screen and (min-width: 720px)
-    flex-basis 10rem
-    background GREEN
-[class^='o-grid__major']
+    flex 1 1 30%
+[class*="o-grid__major"]
+  //flex 1 1 100%
   @media screen and (min-width: 720px)
-    background yellow
-    flex-basis auto
+    flex 1 1 70%

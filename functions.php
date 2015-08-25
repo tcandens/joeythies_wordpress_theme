@@ -62,6 +62,16 @@ class StarterSite extends TimberSite {
 
   function add_to_context( $context ) {
     $context['is_home'] = is_home();
+    $context['menu'] = array(
+      0 => array(
+        "name" => "Writing",
+        "link" => "writing"
+      ),
+      1 => array(
+        "name" => "Work",
+        "link" => "work"
+      )
+    );
     return $context;
   }
 
