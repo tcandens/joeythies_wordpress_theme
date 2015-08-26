@@ -2,8 +2,8 @@
 
 {% block content %}
   <div class="o-grid__container o-grid__container--reverse">
-    <div class="o-grid__minor-right c-archive-header">
-      <h1 class="c-archive-header__title u-lrg">{{ title }}</h1>
+    <div class="o-grid__minor-right | c-archive-header">
+      <h1 class="c-archive-header__title | u-lrg">{{ title }}</h1>
       <ul class="c-rowlist c-archive-header__categories">
         {% if categories %}
           {% for category in categories %}
@@ -12,7 +12,7 @@
         {% endif %}
       </ul>
     </div>
-    <div class="o-grid__major-left s-darkfield">
+    <div class="o-grid__major-left | s-darkfield">
       {% for post in posts %}
         {% include 'work-preview.twig' %}
       {% endfor %}

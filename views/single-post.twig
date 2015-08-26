@@ -1,20 +1,21 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<article class="c-single">
-  <header class="c-single__header--left c-shadowbox">
-    <div class="c-shadowbox__inner c-borderbox">
-      <h1 class="c-single__header-title">{{ post.title }}</h1>
-      <h2 class="c-single__header-subtitle">{{ post.date | date }}</h2>
-    </div>
-  </header>
-  <div class="c-single__content">
-    {% if post.thesis %}
-      <div class="c-single__post-excerpt">
-        {{ post.thesis }}
+  <article class="o-grid__container">
+    <header class="o-grid__pinned-right o-center o-col">
+      <div class="c-shadowbox">
+        <div class="c-shadowbox__inner c-borderbox">
+          <h1>{{ post.title }}</h1>
+        </div>
       </div>
-    {% endif %}
-    {{ post.content }}
-  </div>
-</article>
+    </header>
+    <div class="o-col o-center">
+      {% if post.thesis %}
+        <div class="c-single__post-excerpt">
+          {{ post.thesis }}
+        </div>
+      {% endif %}
+      {{ post.content }}
+    </div>
+  </article>
 {% endblock %}

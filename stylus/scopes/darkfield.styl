@@ -7,10 +7,12 @@ darkfield()
   background-color MAINCOLOR
   .c-single a
     color white
-    underline()
   .c-tag
     &:after
       background radial-gradient(circle at 3px 50%, MAINCOLOR 0, MAINCOLOR 3px, transparent 3px, transparent 100%)
+  .c-window--negative
+    background-color white
+    border-color white
 
 .s-darkfield
   darkfield()
