@@ -1,7 +1,12 @@
 {% extends "base.twig" %}
 
 {% block content %}
-  <article class="o-grid__container">
+  <article class="o-grid__container | c-single">
+    <div class="o-grid__pinned-left | s-lightfield | is-hidden--med">
+      <a href="{{ site.url }}">
+        {% include 'logo.twig' %}
+      </a>
+    </div>
     <header class="o-grid__pinned-right o-center o-col">
       <div class="c-shadowbox">
         <div class="c-shadowbox__inner c-borderbox">
@@ -9,7 +14,7 @@
         </div>
       </div>
     </header>
-    <div class="o-col o-center">
+    <div class="o-col o-center | c-single__content">
       {% if post.thesis %}
         <div class="c-single__post-excerpt">
           {{ post.thesis }}

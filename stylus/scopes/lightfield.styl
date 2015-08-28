@@ -1,0 +1,22 @@
+/*********************************\
+  Components / Light Field
+\*********************************/
+
+lightfield()
+  color white
+  background-color white
+  .c-single a
+    color MAINCOLOR
+  .c-tag
+    &:after
+      background radial-gradient(circle at 3px 50%, white 0, white 3px, transparent 3px, transparent 100%)
+  .c-window--negative
+    background-color MAINCOLOR
+    border-color MAINCOLOR
+  .c-logo__jt
+    fill MAINCOLOR
+  .c-logo__circle
+    stroke MAINCOLOR
+
+.s-lightfield
+  lightfield()

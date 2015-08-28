@@ -3,12 +3,16 @@
 \*********************************/
 
 .c-single
-  @extends .o-col
-  @extends .o-center
   margin 1rem 0.5rem
 .c-single__header
   margin-bottom 2rem
 .c-single__content
-  @extends .o-col
-  @extends .o-center
   min-height 100%
+  @media MQ-LARGE
+    margin-top 10rem
+.c-single .c-logo
+  width 100px
+  height 100px
+  .c-logo__circle
+    display none
+    visibility hidden

@@ -15,22 +15,20 @@
 
 [class*="o-grid__minor"]
   width 100%
-  //flex 0 1 100%
   @media MQ-MED
     flex 1 1 30%
 [class*="o-grid__major"]
-  //flex 1 1 100%
   @media MQ-MED
     flex 1 1 70%
 
 .o-grid__pinned-left, .o-grid__pinned-right
-  @media MQ-MED
+  @media MQ-LARGE
     position absolute
     top 1rem
-    width 20%
+    max-width 30%
 .o-grid__pinned-left
-  @media MQ-MED
+  @media MQ-LARGE
     left 1rem
 .o-grid__pinned-right
-  @media MQ-MED
+  @media MQ-LARGE
     right 1rem

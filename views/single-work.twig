@@ -1,10 +1,10 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<article class="c-single">
-  <header class="c-single__header c-shadowbox--negative">
-    <div class="c-shadowbox__inner c-borderbox--negative">
-      <h1 class="c-single__header-title">{{ post.title }}</h1>
+<article class="o-grid__container | c-single">
+  <header class="o-grid__pinned-right | c-single__header c-shadowbox--negative">
+    <div class="c-shadowbox__inner c-borderbox--negative s-darkfield">
+      <h1 class="">{{ post.title }}</h1>
       <ul class="c-rowlist">
         {% if post.terms() %}
           {% for term in post.terms() %}
@@ -14,7 +14,7 @@
       </ul>
     </div>
   </header>
-  <div class="c-single__content">
+  <div class="o-col o-center | c-single__content">
     {% if post.thesis %}
       <div class="c-single__post-excerpt">
         {{ post.thesis }}
