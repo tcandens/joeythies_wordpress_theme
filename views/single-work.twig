@@ -1,27 +1,34 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<article class="o-grid__container | c-single">
-  <header class="o-grid__pinned-right | c-single__header c-shadowbox--negative">
-    <div class="c-shadowbox__inner c-borderbox--negative s-darkfield">
-      <h1 class="">{{ post.title }}</h1>
-      <ul class="c-rowlist">
-        {% if post.terms() %}
-          {% for term in post.terms() %}
-            <li class="c-tag">{{ term.name }}</li>
-          {% endfor %}
-        {% endif %}
-      </ul>
-    </div>
-  </header>
-  <div class="o-col o-center | c-single__content">
-    {% if post.thesis %}
-      <div class="c-single__post-excerpt">
-        {{ post.thesis }}
+  <article class="o-grid__container | c-single">
+    <div class="o-fullwidth-container o-row--reverse | c-single__top | u-padded-l">
+      <div class="u-hidden@med">
+        <a href="{{ site.url }}">
+          {% include 'logo.twig' %}
+        </a>
       </div>
-    {% endif %}
-    {{ post.content }}
-  </div>
-</article>
+      <header class="c-single__header c-shadowbox--negative">
+        <div class="c-shadowbox__inner c-borderbox--negative s-darkfield">
+          <h1 class="">{{ post.title }}</h1>
+          <ul class="c-rowlist">
+            {% if post.terms() %}
+              {% for term in post.terms() %}
+                <li class="c-tag">{{ term.name }}</li>
+              {% endfor %}
+            {% endif %}
+          </ul>
+        </div>
+      </header>
+    </div>
+    <div class="o-col o-center | c-single__content">
+      {% if post.thesis %}
+        <div class="c-single__post-excerpt">
+          {{ post.thesis }}
+        </div>
+      {% endif %}
+      {{ post.content }}
+    </div>
+  </article>
 {% endblock %}
 

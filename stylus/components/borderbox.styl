@@ -5,9 +5,11 @@
 .c-borderbox
   border 0.5em solid MAINCOLOR
   background-color white
-  &:active
-    border-color ALTCOLOR
 .c-borderbox--negative
   @extends .c-borderbox
+  color white
   border-color white
-  background-color MAINCOLOR
+  background-color MAINCOLOR !important
+a .c-borderbox, a .c-borderbox--negative
+  &:hover
+    border-color ALTCOLOR

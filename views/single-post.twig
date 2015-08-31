@@ -2,23 +2,25 @@
 
 {% block content %}
   <article class="o-grid__container | c-single">
-    <div class="o-grid__pinned-left | s-lightfield | is-hidden--med">
-      <a href="{{ site.url }}">
-        {% include 'logo.twig' %}
-      </a>
-    </div>
-    <header class="o-grid__pinned-right o-center o-col">
-      <div class="c-shadowbox">
-        <div class="c-shadowbox__inner c-borderbox">
-          <h1>{{ post.title }}</h1>
-        </div>
+    <div class="o-fullwidth-container o-row | c-single__top">
+      <div class="s-lightfield | u-hidden@med">
+        <a href="{{ site.url }}">
+          {% include 'logo.twig' %}
+        </a>
       </div>
-    </header>
-    <div class="o-col o-center | c-single__content">
-      {% if post.thesis %}
-        <div class="c-single__post-excerpt">
-          {{ post.thesis }}
+      <header class="o-center o-col | c-single__header">
+        <div class="c-shadowbox">
+          <div class="c-shadowbox__inner c-borderbox--negative">
+            <h1>{{ post.title }}</h1>
+          </div>
         </div>
+      </header>
+    </div>
+    <div class="o-col o-center | c-single__content">
+      {% if post.get_field('tldr') %}
+        <aside class="c-callout">
+          {{ post.get_field('tldr') }}
+        </aside>
       {% endif %}
       {{ post.content }}
     </div>

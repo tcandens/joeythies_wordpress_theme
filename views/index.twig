@@ -4,7 +4,7 @@
   <main class="o-col o-center | t-main" role="main">
     {% if intro %}
       <header class="s-darkfield | o-fullwidth-container o-row c-insetbox">
-        <section class="o-col o-center | c-insetbox__inner">
+        <div class="o-col o-center | c-insetbox__inner">
           {% include "logo.twig" %}
           <h1 class="u-lrg">{{ intro.title }}</h1>
           {{ intro.content }}
@@ -17,7 +17,7 @@
             {% endfor %}
             </ul>
           {% endif %}
-        </section>
+        </div>
       </header>
     {% endif %}
     {% for post in posts %}

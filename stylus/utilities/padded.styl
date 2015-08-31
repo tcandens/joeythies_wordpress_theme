@@ -1,9 +1,14 @@
 /***********************\
   Utilities / Padded
-  @ Creates padding 
+  @ Creates padding
 \***********************/
 
 padded()
   padding 1rem
+padded-l()
+  padded()
+  padding-right 0
 .u-padded
   padded()
+.u-padded-l
+  padded-l()
