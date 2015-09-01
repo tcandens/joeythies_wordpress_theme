@@ -124,10 +124,17 @@ add_filter('quicktags_settings', 'show_quicktags');
 /*
  *Remove Auto Paragraphs from Img tags
  */
-function filter_ptags_on_images($content){
-   return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+//function filter_ptags_on_images($content){
+   ////return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+   ////return preg_replace('/<p>\s*(<a .*>)?\s*(<video .* )\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+   //return preg_replace('/<p>\s*(<video.*>\s*\S*.*\S*\s*<\/video>)\s*<\/p>/iU', '\1', $content);
+//}
+function filter_ptags($content) {
+  $fresh = preg_replace('/<p>\s*(<video.*>\s*\S*.*\S*\s*<\/video>)\s*<\/p>/iU', '\1', $content);
+  $fresh = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $fresh);
+  return $fresh;
 }
-add_filter('the_content', 'filter_ptags_on_images');
+add_filter('the_content', 'filter_ptags');
 
 /*
  *Register Site Wide Main Navigation Menu
