@@ -22,10 +22,10 @@
       </header>
     </div>
     <div class="o-col o-center | c-single__content">
-      {% if post.thesis %}
-        <div class="c-single__post-excerpt">
-          {{ post.thesis }}
-        </div>
+      {% if post.get_field('description') %}
+        <aside class="c-callout">
+          {{ post.get_field('description') }}
+        </aside>
       {% endif %}
       {{ post.content }}
     </div>
