@@ -58,6 +58,14 @@ class StarterSite extends TimberSite {
         'hierarchical' => false
       )
     );
+    register_taxonomy(
+      'tech',
+      'work',
+      array(
+        'label' => __( 'Techs' ),
+        'hierarchical' => false
+      )
+    );
   }
 
   function add_to_context( $context ) {

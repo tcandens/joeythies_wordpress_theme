@@ -12,9 +12,9 @@
         <div class="c-shadowbox__inner c-borderbox--negative s-darkfield">
           <h1 class="">{{ post.title }}</h1>
           <ul class="c-rowlist">
-            {% if post.terms() %}
-              {% for term in post.terms() %}
-                <li class="c-tag">{{ term.name }}</li>
+            {% if post.get_field('roles') %}
+              {% for role in post.get_field('roles') %}
+                <li class="c-tag">{{ role.name }}</li>
               {% endfor %}
             {% endif %}
           </ul>
@@ -26,6 +26,18 @@
         <p>
           {{ post.get_field('description') }}
         </p>
+      {% endif %}
+      {% if post.get_field('techs') %}
+        <ul class="c-rowlist | u-spacer">
+          {% for tech in post.get_field('techs') %}
+          <li class="c-btn-tertiary">{{ tech.name }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% if post.get_field('url') %}
+        <div class="c-btn-minor | u-spacer">
+          <a class="c-underline" href="{{ post.get_field('url') }}">Go</a>
+        </div>
       {% endif %}
       {{ post.content }}
     </div>
