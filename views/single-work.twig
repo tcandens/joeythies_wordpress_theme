@@ -23,9 +23,9 @@
     </div>
     <div class="o-col o-center | c-single__content">
       {% if post.get_field('description') %}
-        <aside class="c-callout">
+        <p>
           {{ post.get_field('description') }}
-        </aside>
+        </p>
       {% endif %}
       {{ post.content }}
     </div>
