@@ -3,9 +3,11 @@
   @ Creates bottom space
 \***********************/
 
-spacer()
-  margin-bottom 1rem
+spacer( multiplier = 1 )
+  margin-bottom 1rem * multiplier
 $u-spacer
   spacer()
 .u-spacer
   @extends $u-spacer
+.u-spacer--lrg
+  spacer( 2 )

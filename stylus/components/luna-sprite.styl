@@ -14,6 +14,11 @@
   background url('images/luna-boot-scoot.png') 0 0
   animation play-luna-boot-scoot 600ms steps(4) infinite,
             play-across-window__small 20s linear infinite
+  @media MQ-MED
+    animation-duration 600ms, 40s
+  @media MQ-LARGE
+    animation-duration 600ms, 60s
+
 @keyframes play-luna-boot-scoot
   0% {
     background-position 0 0
@@ -37,3 +42,5 @@
     right -60px
     transform scaleX(-1)
   }
+
+
