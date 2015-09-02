@@ -10,7 +10,7 @@
       </div>
       <header class="c-single__header c-shadowbox--negative">
         <div class="c-shadowbox__inner c-borderbox--negative s-darkfield">
-          <h1 class="u-spacer">{{ post.title }}</h1>
+          <h1 class="u-align-center u-spacer">{{ post.title }}</h1>
           <ul class="c-rowlist">
             {% if post.get_field('roles') %}
               {% for role in post.get_field('roles') %}
@@ -23,9 +23,7 @@
     </div>
     <div class="o-col o-center | c-single__content">
       {% if post.get_field('description') %}
-        <p>
-          {{ post.get_field('description') }}
-        </p>
+        {{ post.get_field('description') }}
       {% endif %}
       {% if post.get_field('techs') %}
         <ul class="c-rowlist | u-spacer--lrg">
@@ -34,10 +32,19 @@
           {% endfor %}
         </ul>
       {% endif %}
-      {% if post.get_field('url') %}
-        <div class="c-btn-minor | u-spacer--lrg">
-          <a class="c-underline" href="{{ post.get_field('url') }}">View</a>
-        </div>
+      {% if post.get_field('url') or post.get_field('source') %}
+      <ul class="o-row | u-spacer">
+        {% if post.get_field('url') %}
+          <li class="c-btn-minor">
+            <a class="c-underline" href="{{ post.get_field('url') }}">View</a>
+          </li>
+        {% endif %}
+        {% if post.get_field('source') %}
+          <li class="c-btn-minor">
+            <a class="c-underline" href="{{ post.get_field('source') }}">Source</a>
+          </li>
+        {% endif %}
+      </ul>
       {% endif %}
       {{ post.content }}
     </div>
